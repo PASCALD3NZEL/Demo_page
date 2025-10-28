@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 70px;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-logo {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.skill {
+  color: #0a1f44;
+}
+
+.bridge {
+  color: #ffb703;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0a1f44;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1976ff;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.join-btn {
+  background-color: #1976ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-weight: 500;
+}

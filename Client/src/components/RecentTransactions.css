@@ -1,0 +1,92 @@
+.transactions-card{
+  background:white;
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #f1f5f9;
+}
+.transactions-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+.transactions-header h4{
+  margin:0;
+  font-size: 18px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.transactions-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.transactions-table th{
+  color:var(--text-secondary);
+  text-align:left;
+  padding:12px 10px;
+  border-bottom:1px solid var(--border-medium);
+  font-weight:600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.transactions-table td{
+  padding:16px 10px;
+  border-bottom:1px solid var(--border-light);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.transactions-table tr:last-child td{
+  border-bottom: none;
+}
+.transactions-table tr:hover td{
+  background-color: var(--bg);
+}
+.view-all{
+  color:var(--brand-blue);
+  cursor:pointer;
+  font-weight:600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.view-all:hover{
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+.table-wrap{
+  overflow:auto;
+  max-height:320px;
+  padding-right:6px;
+}
+.table-wrap::-webkit-scrollbar{
+  width: 6px;
+}
+.table-wrap::-webkit-scrollbar-track{
+  background: var(--border-light);
+  border-radius: 10px;
+}
+.table-wrap::-webkit-scrollbar-thumb{
+  background: var(--text-tertiary);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .transactions-card {
+    padding: 16px;
+  }
+  
+  .transactions-header h4 {
+    font-size: 16px;
+  }
+  
+  .transactions-table th {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+  
+  .transactions-table td {
+    font-size: 12px;
+    padding: 12px 6px;
+  }
+}

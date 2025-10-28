@@ -1,0 +1,27 @@
+.chart-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  border: 1px solid #f1f5f9;
+}
+
+.chart-card h4 {
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+
+@media (max-width: 768px) {
+  .chart-card {
+    padding: 16px;
+  }
+  
+  .chart-card h4 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}

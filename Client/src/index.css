@@ -1,0 +1,76 @@
+:root {
+  --navy: #1e293b;
+  --blue: #246BFD;
+  --light-blue: #93C5FD;
+  --green: #34D399;
+  --red: #EF4444;
+  --yellow: #FBBF24;
+  --gray: #64748B;
+  --light-gray: #F1F5F9;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--light-gray);
+  color: var(--navy);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .admin-container,
+body.dark-mode .admin-main,
+body.dark-mode .admin-content,
+body.dark-mode .users-table-container,
+body.dark-mode .transactions-card,
+body.dark-mode .top-card {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+body.dark-mode .users-table th,
+body.dark-mode .users-table td,
+body.dark-mode .transactions-table th,
+body.dark-mode .transactions-table td {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+body.dark-mode .users-table th,
+body.dark-mode .transactions-table th {
+  background-color: #333;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+  border-color: var(--blue);
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
+}
+
+#root {
+  min-height: 100vh;
+}
