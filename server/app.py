@@ -27,13 +27,13 @@ class AdminAnalyticsResource(Resource):
 
         # Calculate completed projects (contracts with status 'completed')
         completedContracts = len([c for c in contracts if c.status == 'completed'])
-        completionRate = float((completedContracts / totalContracts * 100).toFixed(1)) if totalContracts > 0 else 0.0
+        completionRate = round((completedContracts / totalContracts * 100), 1) if totalContracts > 0 else 0.0
 
         # Calculate total revenue
         totalRevenue = sum(float(p.amount or 0) for p in payments)
 
         # Calculate average project value
-        avgProjectValue = float((totalRevenue / totalPayments).toFixed(2)) if totalPayments > 0 else 0.0
+        avgProjectValue = round((totalRevenue / totalPayments), 2) if totalPayments > 0 else 0.0
 
         # Calculate monthly growth (simplified - using creation dates)
         currentMonth = datetime.now().month
@@ -78,7 +78,7 @@ class AdminAnalyticsResource(Resource):
         for task in tasks:
             category = getattr(task, 'category', None) or 'General'
             projectCategories[category] = projectCategories.get(category, 0) + 1
-
+  
         # Top user locations
         locationCounts = {}
         for user in clients + freelancers + admins:
